@@ -1,8 +1,39 @@
-<iframe 
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-    width="560" 
-    height="315" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-</iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con iframes</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Menú y contenido central */
+            grid-template-rows: auto 1fr; /* Título y contenido principal */
+            height: 100vh; /* Ocupa toda la pantalla */
+            margin: 0;
+        }
+        header {
+            grid-column: 1 / span 2; /* El título ocupa todo el ancho */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        aside {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe src="titulo.html"></iframe>
+    </header>
+    <aside>
+        <iframe src="menu.html"></iframe>
+    </aside>
+    <main>
+        <iframe src="Tabla.html"></iframe>
+    </main>
+</body>
+</html>
